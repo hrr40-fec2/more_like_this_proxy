@@ -5,6 +5,7 @@
   "main": "server/index.js",
   "scripts": {
     "test": "test",
+    "build": "webpack -d --watch",
     "start": "node server/index.js",
     "server": "nodemon server/index.js"
   },
@@ -20,6 +21,16 @@
   "homepage": "https://github.com/hrr40-fec2/more_like_this_proxy#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "nodemon": "^1.19.2"
+    "nodemon": "^1.19.2",
+    "react": "^16.9.0",
+    "styled-components": "^4.3.2",
+    "webpack": "^4.39.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "webpack-cli": "^3.3.7"
   }
 }
