@@ -5,11 +5,23 @@
   </head>
   <body>
     <p>This is some filler text.</p>
+    <div id="itemoverview"></div>
+    <div id="photocarousel"></div>
     <div id="more"></div>
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="http://localhost:3003/bundle.js"></script>
+    <script src="http://localhost:3002/bundle.js"></script>
     <script src="http://localhost:3001/bundle.js"></script>
     <script>
+      ReactDOM.render(
+        React.createElement(ItemOverview),
+        document.getElementById('itemoverview')
+      );
+      ReactDOM.render(
+        React.createElement(App),
+        document.getElementById('photocarousel')
+      );
       ReactDOM.render(
         React.createElement(More),
         document.getElementById('more')
