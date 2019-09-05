@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
     <title>Movie Database</title>
+    <style>
+      #itemdata, #photos, #more {
+        margin-bottom: 10px;
+      }
+      .itemdata {
+        height: 500px;
+      }
+      .photos {
+        height: 300px;
+        position: relative;
+        left: -100px;
+      }
+      .more {
+        position: relative;
+        left: 80px;
+      }
+
+    </style>
   </head>
   <body>
-    <p>This is some filler text.</p>
-    <div id="itemdata"></div>
-    <div id="photos"></div>
-    <div id="more"></div>
+    <div class="itemdata">
+      <div id="itemdata"></div>
+    </div>
+    <div class="photos">
+      <div id="photos"></div>
+    </div>
+    <div class="more">
+      <div id="more"></div>
+    </div>
     <script src="vendors.js"></script>
-    <!-- <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script> -->
     <script src="itemoverview.js"></script>
     <script src="more.js"></script>
     <script src="photos.js"></script>
-
   </body>
 </html>
