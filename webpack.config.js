@@ -54,8 +54,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'styled-components': path.resolve(__dirname, 'node_modules', 'styled-components'),
-      'style-loader': path.resolve(__dirname, 'node_modules', 'styled-components')
+      'styled-components': path.resolve(__dirname, 'node_modules', 'styled-components')
     }
   }
 };
