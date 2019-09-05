@@ -4,25 +4,36 @@ const DIST_DIR = path.join(__dirname, '/public');
 module.exports = [
   {
     entry: {
-      more: path.join(__dirname, '../more_like_this_service/client/src/index.js'),
+      more: path.join(__dirname, '../more_like_this_service/client/src/index.jsx'),
     },
     output: {
       filename: '[name].js',
-      path: DIST_DIR,
-      libraryTarget: 'var',
-      library: 'More'
+      path: DIST_DIR
     },
     module: {
       rules: [
         {
-          test: [/\.jsx$/],
+          test: [/\.(js|jsx)$/],
           exclude: /node_modules/,
           use: {
-            loader: 'babel-loader',
+            loader: "babel-loader",
             options: {
               presets: ['@babel/preset-react', '@babel/preset-env']
             }
           }
+        },
+        {
+          test: /\.(sa|sc|c)ss$/,
+          use: [
+            { loader: 'style-loader' },
+            {
+              loader:'css-loader',
+              options: {
+                modules: true
+              }
+            },
+            { loader: 'sass-loader' }
+          ]
         }
       ]
     },
@@ -44,7 +55,7 @@ module.exports = [
 
   {
     entry: {
-      photos: path.join(__dirname, '../Photo-Carousel/client/src/index.js'),
+      photos: path.join(__dirname, '../Photo-Carousel/client/src/index.jsx'),
     },
     module: {
       rules: [
@@ -75,9 +86,7 @@ module.exports = [
     },
     output: {
       filename: '[name].js',
-      path: DIST_DIR,
-      libraryTarget: 'var',
-      library: 'App'
+      path: DIST_DIR
     },
     optimization: {
       runtimeChunk: {
@@ -97,7 +106,7 @@ module.exports = [
 
   {
     entry: {
-      itemoverview: path.join(__dirname, '../item-data-service/client/src/index.js'),
+      itemoverview: path.join(__dirname, '../item-data-service/client/src/index.jsx'),
     },
     module: {
       rules: [
@@ -115,9 +124,7 @@ module.exports = [
     },
     output: {
       filename: '[name].js',
-      path: DIST_DIR,
-      libraryTarget: 'var',
-      library: 'ItemOverview'
+      path: DIST_DIR
     },
     optimization: {
       runtimeChunk: {
